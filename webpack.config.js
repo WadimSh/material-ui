@@ -5,13 +5,12 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    library: 'MyLibrary',
-    libraryTarget: 'umd'
+    libraryTarget: 'commonjs2'
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
