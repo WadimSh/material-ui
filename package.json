@@ -1,23 +1,26 @@
 {
-  "name": "y",
+  "name": "@WadimSh/material-ui.werstack",
+  "files": [
+    "./dist"
+  ],
+  "publishConfig": {
+      "registry": "https://npm.pkg.github.com"
+  },
+  "repository": "git://github.com/WadimSh/material-ui.werstack",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "source": "src/index.js",
+  "dependencies": {
+      "react-scripts": "3.4.3"
+  },
   "scripts": {
     "build": "webpack",
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WadimSh/material-ui.werstack.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/WadimSh/material-ui.werstack/issues"
   },
-  "homepage": "https://github.com/WadimSh/material-ui.werstack#readme",
   "devDependencies": {
     "@babel/core": "^7.23.5",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
