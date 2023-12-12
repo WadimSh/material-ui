@@ -1,0 +1,30 @@
+.button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  background-color: #437ef7;
+  box-shadow: var(--primary-box-shadow);
+  font-size: 14px;
+  color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.button:focus {
+  background-color: #5390f8;
+}
+
+.button:hover {
+  background-color: #3e67e3;
+}
+
+.button:disabled {
+  background-color: #dae0e6;
+  color: #fff;
+  box-shadow: none;
+  pointer-events: none;
+}
