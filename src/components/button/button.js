@@ -1,9 +1,11 @@
 import React from 'react';
 import "./button.css";
 
-function  Button({ htmiType, onClick, children, ...rest }) {
+const  Button = ({ htmiType, onClick, children, className, ...rest }) => {
+  const buttonClassName = `button ${className || ''}`;
+
   return (
-    <button type={htmiType} onClick={onClick} className="button" {...rest}>
+    <button type={htmiType} onClick={onClick} className={buttonClassName} {...rest}>
       {children || 'label'}
     </button>
   )
