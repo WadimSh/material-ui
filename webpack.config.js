@@ -1,11 +1,14 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    libraryTarget: 'commonjs2'
+    libraryTarget: 'umd',
+    library: 'my-ui-components',
+    umdNamedDefine: true,
   },
   module: {
     rules: [
@@ -14,19 +17,18 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options:{
-            presets: ['@babel/preset-react']
-          }
-        }
-      }
-    ]
-  },
-  module: {
-    rules: [
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
+      },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   }
 };
