@@ -1,9 +1,13 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const glob = require('glob');
 
 module.exports = {
   mode: 'development',
-  entry: ['./src/index.js', './src/inners.css'],
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -25,19 +29,6 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: [
-          path.resolve(__dirname, 'src/components')
-        ],
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-        ],
-      },
-      {
-        test: /\.css$/,
-        include: [
-          path.resolve(__dirname, 'src/components')
-        ],
         use: [
           'style-loader',
           'css-loader',
@@ -46,8 +37,19 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'index.css',
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './src/inners.css',
+          to: 'inners.css',
+        },
+      ],
     }),
   ],
+  optimization: {
+    minimizer: [
+      new CssMinimizerPlugin(),
+      new TerserPlugin(),
+    ],
+  },
 };
