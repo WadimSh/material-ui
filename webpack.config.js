@@ -1,9 +1,7 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const glob = require('glob');
 
 module.exports = {
   mode: 'development',
@@ -40,8 +38,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: './src/inners.css',
-          to: 'inners.css',
+          from: './src/common.css',
+          to: 'common.css',
         },
       ],
     }),
