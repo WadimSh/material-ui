@@ -1,3 +1,47 @@
 .heading {
+  /* Общие стили для заголовков */
   margin: 0;
+  padding: 0;
+}
+
+.heading.h1 {
+  /* Стили для заголовка уровня h1 */
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.heading.h2 {
+  /* Стили для заголовка уровня h2 */
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.heading.h3 {
+  /* Стили для заголовка уровня h3 */
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.heading.h4 {
+  /* Стили для заголовка уровня h4 */
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.heading.h5 {
+  /* Стили для заголовка уровня h5 */
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.heading.h6 {
+  /* Стили для заголовка уровня h6 */
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
 }
