@@ -2,12 +2,12 @@ import React from 'react';
 import './textBlock.css';
 
 const TextBlock = ({
-  textArray,
-  extraClass,
-  tag: Tag = 'div',
-  paragraphClass,
-  paragraphProps,
-  ...rest
+  textArray,         // Массив текстовых строк для отображения
+  extraClass,        // Дополнительный класс (HTML-атрибут class) для текстового блока
+  tag: Tag = 'div',  // HTML-тег для обертки текстового блока (по умолчанию - 'div')
+  paragraphClass,    // Дополнительный класс для стилизации параграфов
+  paragraphProps,    // Дополнительные пропсы для всех параграфов
+  ...rest            // Дополнительные пропсы
 }) => {
   const className = `textblock ${extraClass || ''}`.trim();
 

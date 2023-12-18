@@ -6,7 +6,7 @@ const Button = ({
   align,         // Выравнивание текста кнопки (CSS-свойство text-align)
   autoFocus,     // Установка фокуса на кнопку после загрузки страницы
   borderless,    // Убирание обводки у кнопки
-  extraClass,     // HTML-атрибут class
+  extraClass,    // HTML-атрибут class
   dataTid,       // Трансляция любых data-атрибутов, на равне с data-tid, на корневой элемент
   disabled,      // Отключенное состояние кнопки
   error,         // Состояние валидации при ошибке
@@ -31,7 +31,6 @@ const Button = ({
   const buttonStyles = {
     textAlign: align,
     width: typeof width === 'number' ? `${width}px` : width,
-    // Добавьте другие стили на основе пропсов по необходимости
   };
 
   let buttonClasses = `button ${extraClass || ''}`.trim();
