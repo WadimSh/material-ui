@@ -26,7 +26,7 @@ const Button = ({
   warning,       // Состояние валидации при предупреждении
   width,         // CSS-свойство width (строка или число)
   children,      // Внутреннее содержимое кнопки
-  ...rest     // Дополнительные пропсы
+  ...rest        // Дополнительные пропсы
 }) => {
   const buttonStyles = {
     textAlign: align,
