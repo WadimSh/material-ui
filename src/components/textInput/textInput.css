@@ -1,15 +1,14 @@
-.input-box {
+.textinput-box {
   display: inline-flex;
   flex-direction: column;
   position: relative;
-  min-width: 0px;
   padding: 0px;
   margin: 0px;
   border: 0px;
   vertical-align: top;
 }
 
-.input-box .label {
+.textinput-box .label {
   color: rgba(0, 0, 0, 0.6);
   font-weight: 400;
   font-size: 1rem;
@@ -31,11 +30,11 @@
   pointer-events: none;
 }
 
-.input-box .label-shift {
+.textinput-box .label-shift {
   transform: translate(40px, 16px) scale(1);
 }
 
-.input-box .label-active {
+.textinput-box .label-active {
   left: 0;
   color: rgb(25, 118, 210);
   padding: 0px 5px;
@@ -44,7 +43,7 @@
   background-color: #fff;
 }
 
-.input-box .wrapper {
+.textinput-box .wrapper {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.4375em;
@@ -65,17 +64,17 @@
   border-color: rgba(0, 0, 0, 0.23);
 }
 
-.input-box .wrapper-active {
+.textinput-box .wrapper-active {
   border-color: rgb(25, 118, 210);
   border-width: 2px;
 }
 
-.input-box .wrapper-error {
+.textinput-box .wrapper-error {
   border-color: red;
   border-width: 2px;
 }
 
-.input-box .input {
+.textinput-box .textinput {
   font: inherit;
   letter-spacing: inherit;
   color: currentcolor;
@@ -93,7 +92,7 @@
   outline: 0px;
 }
 
-.input-box .error {
+.textinput-box .error {
   color: red;
   font-size: 0.75rem;
   line-height: 1.4375em;
@@ -101,22 +100,20 @@
   margin-top: 8px;
 }
 
-.input-box .icon-before {
+.textinput-box .icon-before {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
   margin-right: 5px;
 }
 
-.input-box .icon-after {
+.textinput-box .icon-after {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
   margin-left: 5px;
 }

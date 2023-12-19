@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './input.css';
+import './textInput.css';
 
-const Input = ({ 
+const TextInput = ({ 
   value,
-  type = 'text',
   label,
   onChange,
   validateInput,
@@ -62,7 +61,7 @@ const Input = ({
     }
   };
 
-  const inputBoxClass = `input-box ${extraClass || ''}`.trim();
+  const inputBoxClass = `textinput-box ${extraClass || ''}`.trim();
   const labelClass = `${iconBefore ? 'label label-shift' : 'label'} ${active || inputValue || focy ? 'label-active' : ''}`.trim();
   const wrapperClass = `${error ? 'wrapper wrapper-error' : 'wrapper'} ${active || inputValue || focy ? 'wrapper-active' : ''}`.trim();
 
@@ -73,11 +72,11 @@ const Input = ({
         {iconBefore && <span className="icon-before">{iconBefore}</span>}
         <input
           ref={inputRef}
-          type={type}
+          type="text"
           value={inputValue}
           onChange={handleChange}
           onBlur={handleBlur}
-          className="input"
+          className="textinput"
           {...rest}
         />
         {iconAfter && <span className="icon-after">{iconAfter}</span>}
@@ -87,4 +86,4 @@ const Input = ({
   );
 };
 
-export default Input;
+export default TextInput;
