@@ -7,7 +7,6 @@ const Button = ({
   autoFocus,     // Установка фокуса на кнопку после загрузки страницы
   borderless,    // Убирание обводки у кнопки
   extraClass,    // HTML-атрибут class
-  dataTid,       // Трансляция любых data-атрибутов, на равне с data-tid, на корневой элемент
   disabled,      // Отключенное состояние кнопки
   error,         // Состояние валидации при ошибке
   icon,          // Иконка слева от текста кнопки
@@ -27,6 +26,7 @@ const Button = ({
   warning,       // Состояние валидации при предупреждении
   width,         // CSS-свойство width (строка или число)
   children,      // Внутреннее содержимое кнопки
+  ...rest     // Дополнительные пропсы
 }) => {
   const buttonStyles = {
     textAlign: align,
@@ -77,13 +77,13 @@ const Button = ({
   return (
     <button
       className={buttonClasses}
-      data-tid={dataTid}
       disabled={disabled || loading}
       autoFocus={autoFocus}
       style={{ ...buttonStyles, ...style }}
       title={title}
       type={type}
       {...buttonEvents}
+      {...rest}
     >
       {icon && <span className="icon">{icon}</span>}
       {children}

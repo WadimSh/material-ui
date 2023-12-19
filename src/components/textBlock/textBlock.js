@@ -3,7 +3,7 @@ import './textBlock.css';
 
 const TextBlock = ({
   textArray,         // Массив текстовых строк для отображения
-  extraClass,        // Дополнительный класс (HTML-атрибут class) для текстового блока
+  extraClass,        // HTML-атрибут class
   tag: Tag = 'div',  // HTML-тег для обертки текстового блока (по умолчанию - 'div')
   paragraphClass,    // Дополнительный класс для стилизации параграфов
   paragraphProps,    // Дополнительные пропсы для всех параграфов
