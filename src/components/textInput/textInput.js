@@ -2,15 +2,15 @@ import React, { useState, useRef, useEffect } from 'react';
 import './textInput.css';
 
 const TextInput = ({ 
-  value,
-  label,
-  onChange,
-  validateInput,
-  iconBefore, 
-  iconAfter, 
-  extraClass,
-  required,
-  ...rest 
+  value,          // Значение ввода
+  label,          // Метка для поля ввода
+  onChange,       // HTML-событие onclick
+  validateInput,  // Функция для валидации ввода
+  iconBefore,     // Иконка, отображаемая перед полем ввода
+  iconAfter,      // Иконка, отображаемая после поля ввода
+  extraClass,     // HTML-атрибут class
+  required,       // Флаг, указывающий, является ли поле обязательным для заполнения
+  ...rest         // Дополнительные пропсы
 }) => {
   const [inputValue, setInputValue] = useState(value);
   const [error, setError] = useState('');
@@ -26,13 +26,10 @@ const TextInput = ({
         setFocy(true);
       }
     };
-
     document.addEventListener('click', handleDocumentClick);
-
     return () => {
       document.removeEventListener('click', handleDocumentClick);
     };
-    
   }, []);
 
   const handleChange = (e) => {
