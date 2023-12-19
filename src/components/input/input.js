@@ -3,6 +3,7 @@ import './input.css';
 
 const Input = ({ 
   value,
+  type = 'text',
   label,
   onChange,
   validateInput,
@@ -61,18 +62,22 @@ const Input = ({
     }
   };
 
+  const inputBoxClass = `input-box ${extraClass || ''}`.trim();
+  const labelClass = `${iconBefore ? 'label label-shift' : 'label'} ${active || inputValue || focy ? 'label-active' : ''}`.trim();
+  const wrapperClass = `${error ? 'wrapper wrapper-error' : 'wrapper'} ${active || inputValue || focy ? 'wrapper-active' : ''}`.trim();
+
   return (
-    <div className={`input-box ${extraClass || ''}`} onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)}>
-      {label && <label className={`${iconBefore ? 'label label-shift' : 'label'} ${active || inputValue || focy ? 'label-active' : ''}`}>{label}</label>}
-      <div className={`${error ? 'wrapper wrapper-error' : 'wrapper'} ${active || inputValue || focy ? 'wrapper-active' : ''}`}>
+    <div className={inputBoxClass} onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)}>
+      {label && <label className={labelClass}>{label}</label>}
+      <div className={wrapperClass}>
         {iconBefore && <span className="icon-before">{iconBefore}</span>}
         <input
           ref={inputRef}
-          type='text'
+          type={type}
           value={inputValue}
           onChange={handleChange}
           onBlur={handleBlur}
-          className='input'
+          className="input"
           {...rest}
         />
         {iconAfter && <span className="icon-after">{iconAfter}</span>}
