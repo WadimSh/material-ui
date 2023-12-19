@@ -21,7 +21,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: calc(100% - 24px);
+  max-width: calc(100% - 50px);
   position: absolute;
   left: 0px;
   top: 0px;
