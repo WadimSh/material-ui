@@ -2,10 +2,7 @@ import React from 'react';
 import './button.css';
 
 const Button = ({
-  active,        // Применение стилей псевдокласса :active
-  autoFocus,     // Установка фокуса на кнопку после загрузки страницы
   disabled,      // Отключенное состояние кнопки
-  loading,       // Перевод кнопки в состояние загрузки
   extraClass,    // HTML-атрибут class
   iconBefore,    // Иконка слева от текста кнопки
   iconAfter,     // Иконка справа от текста кнопки
@@ -21,14 +18,6 @@ const Button = ({
 }) => {
   let buttonClasses = `button ${extraClass || ''}`.trim();
 
-  if (active) {
-    buttonClasses += ' active';
-  }
-
-  if (disabled || loading) {
-    buttonClasses += ' disabled';
-  }
-
   if (size) {
     buttonClasses += ` ${size}`;
   }
@@ -43,8 +32,7 @@ const Button = ({
   return (
     <button
       className={buttonClasses}
-      disabled={disabled || loading}
-      autoFocus={autoFocus}
+      disabled={disabled}
       style={{ ...style }}
       title={title}
       type={type}

@@ -4,14 +4,12 @@ import './textInput.css';
 const TextInput = ({ 
   value,          // Значение ввода
   label,          // Метка для поля ввода
-  onChange,       // HTML-событие onclick
+  onChange,       // HTML-событие onchange
   validateInput,  // Функция для валидации ввода
   iconBefore,     // Иконка, отображаемая перед полем ввода
   iconAfter,      // Иконка, отображаемая после поля ввода
   extraClass,     // HTML-атрибут class
   required,       // Флаг, указывающий, является ли поле обязательным для заполнения
-  active,         // Применение стилей псевдокласса :active
-  autoFocus,      // Установка фокуса на поле ввода после загрузки страницы
   disabled,       // Отключенное состояние поля ввода
   size,           // Размер поля ввода: "small", "medium", "large"
   ...rest         // Дополнительные пропсы
@@ -64,12 +62,8 @@ const TextInput = ({
 
   let inputBoxClass = `textinput-box ${extraClass || ''}`.trim();
   
-  // Применение стилей active, disabled, size пока в разработке
-  if (active) {
-    inputBoxClass += ' active';
-  }
-
-  if (disabled || loading) {
+  // Применение стилей disabled, size пока в разработке
+  if (disabled) {
     inputBoxClass += ' disabled';
   }
 

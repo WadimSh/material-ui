@@ -6,16 +6,19 @@
   text-decoration: none;
   cursor: pointer;
   border-radius: 5px;
+  background-color: #1976d2;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.button.active {
-  /* Стили для активной кнопки */
+.button:hover,
+.button:focus {
+  /* Стили для hover и focus для общей части кнопки */
   background-color: #3498db;
   color: #fff;
+  outline: none;
 }
 
-.button.disabled {
+.button:disabled {
   /* Стили для отключенной кнопки */
   opacity: 0.7;
   cursor: not-allowed;
@@ -34,12 +37,6 @@
 .button.large {
   /* Стили для большой кнопки */
   font-size: 20px;
-}
-
-.button:hover,
-.button:focus {
-  /* Стили для hover и focus для общей части кнопки */
-  outline: none;
 }
 
 .button .before {
