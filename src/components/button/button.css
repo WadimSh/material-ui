@@ -15,21 +15,10 @@
   color: #fff;
 }
 
-.button.borderless {
-  /* Стили для кнопки без обводки */
-  border: none;
-}
-
 .button.disabled {
   /* Стили для отключенной кнопки */
   opacity: 0.7;
   cursor: not-allowed;
-}
-
-.button.error {
-  /* Стили для кнопки с ошибкой */
-  border: 2px solid #e74c3c;
-  color: #e74c3c;
 }
 
 .button.small {
@@ -47,88 +36,22 @@
   font-size: 20px;
 }
 
-.button.default {
-  /* Стили для кнопки по умолчанию */
-  background-color: #3498db;
-  color: #fff;
-}
-
-.button.primary {
-  /* Стили для кнопки с основным акцентным цветом */
-  background-color: #3498db;
-  color: #fff;
-}
-
-.button.primary:hover,
-.button.primary:focus {
-  background-color: #2980b9;
-}
-
-.button.success {
-  /* Стили для кнопки с цветом успеха */
-  background-color: #2ecc71;
-  color: #fff;
-}
-
-.button.danger {
-  /* Стили для кнопки с красным цветом (опасность) */
-  background-color: #e74c3c;
-  color: #fff;
-}
-
-.button.pay {
-  /* Стили для кнопки оплаты */
-  background-color: #27ae60;
-  color: #fff;
-}
-
-.button.link {
-  /* Стили для кнопки-ссылки */
-  background-color: transparent;
-  border: none;
-  color: #3498db;
-  text-decoration: underline;
-}
-
-.button.link:hover,
-.button.link:focus {
-  color: #2980b9;
-}
-
-.button.text {
-  /* Стили для текстовой кнопки */
-  background-color: transparent;
-  border: none;
-  color: #3498db;
-}
-
-.button.text:hover,
-.button.text:focus {
-  text-decoration: underline;
-}
-
-.button.backless {
-  /* Стили для кнопки без фона */
-  background-color: transparent;
-  border: none;
-  color: inherit;
-}
-
-.button.warning {
-  /* Стили для кнопки с предупреждением */
-  background-color: #f39c12;
-  color: #fff;
-}
-
 .button:hover,
 .button:focus {
   /* Стили для hover и focus для общей части кнопки */
   outline: none;
 }
 
-.button .icon {
+.button .before {
   /* Стили для иконки внутри кнопки */
   display: inline-block;
-  vertical-align: middle; /* Выравнивание по вертикали с текстом */
-  margin-right: 5px; /* Примерный отступ между иконкой и текстом */
+  vertical-align: middle; 
+  margin-right: 5px;
+}
+
+.button .after {
+  /* Стили для иконки внутри кнопки */
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
 }

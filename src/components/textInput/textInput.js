@@ -10,6 +10,11 @@ const TextInput = ({
   iconAfter,      // Иконка, отображаемая после поля ввода
   extraClass,     // HTML-атрибут class
   required,       // Флаг, указывающий, является ли поле обязательным для заполнения
+  
+  active,         // Применение стилей псевдокласса :active
+  autoFocus,      // Установка фокуса на поле ввода после загрузки страницы
+  disabled,       // Отключенное состояние поля ввода
+  size,           // Размер поля ввода: "small", "medium", "large"
   ...rest         // Дополнительные пропсы
 }) => {
   const [inputValue, setInputValue] = useState(value);
@@ -58,7 +63,21 @@ const TextInput = ({
     }
   };
 
-  const inputBoxClass = `textinput-box ${extraClass || ''}`.trim();
+  let inputBoxClass = `textinput-box ${extraClass || ''}`.trim();
+  
+  // Применение стилей active, disabled, size пока в разработке
+  if (active) {
+    inputBoxClass += ' active';
+  }
+
+  if (disabled || loading) {
+    inputBoxClass += ' disabled';
+  }
+
+  if (size) {
+    inputBoxClass += ` ${size}`;
+  }
+
   const labelClass = `${iconBefore ? 'label label-shift' : 'label'} ${active || inputValue || focy ? 'label-active' : ''}`.trim();
   const wrapperClass = `${error ? 'wrapper wrapper-error' : 'wrapper'} ${active || inputValue || focy ? 'wrapper-active' : ''}`.trim();
 
