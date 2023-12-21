@@ -4,3 +4,4 @@ export { default as TextBlock } from './components/textBlock/textBlock';
 export { default as TextInput } from './components/textInput/textInput';
 export { default as CheckBox } from './components/checkBox/checkBox';
 export { default as RadioGroup } from './components/radioGroup/radioGroup';
+export { default as Toggle } from './components/toggle/toggle';
