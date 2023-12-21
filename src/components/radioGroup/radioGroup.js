@@ -33,7 +33,7 @@ const RadioGroup = ({
   }
   
   return (
-    <div className={radiogroupBlockClass}>
+    <div className={radiogroupBlockClass} {...rest}>
       {options.map((option, index) => (
         <label key={index} className="radiogroup-box">
           <span className={`wrapper ${selectedOption == option.value ? 'wrapper-active' : ''}`}>
@@ -44,7 +44,6 @@ const RadioGroup = ({
               checked={selectedOption === option.value}
               onChange={handleOptionChange}
               className="input"
-              {...rest}
             />
             <span className="icons">
             <svg className="round" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

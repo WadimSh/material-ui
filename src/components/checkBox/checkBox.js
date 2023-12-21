@@ -36,14 +36,13 @@ const CheckBox = ({
   const wrapperClass = `wrapper ${isChecked ? 'wrapper-active' : ''}`.trim();
 
   return (
-    <label className={checkboxBlockClass}>
+    <label className={checkboxBlockClass} {...rest}>
       <span className={wrapperClass}>
         <input
           type="checkbox"
           checked={isChecked}
           onChange={handleCheckboxChange}
           className="input"
-          {...rest}
         />
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
