@@ -1,0 +1,99 @@
+.radiogroup-block {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.radiogroup-block .radiogroup-box {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: -4px;
+}
+
+.radiogroup-box .wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  padding: 2px;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.radiogroup-box:hover .wrapper {
+  background-color: rgba(25, 118, 210, 0.05);
+}
+
+
+.radiogroup-box .wrapper-active {
+  color: rgb(25, 118, 210);
+}
+
+.radiogroup-box .input {
+  cursor: inherit;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.radiogroup-box .icons {
+  position: relative;
+  display: flex;
+}
+
+.radiogroup-box .round {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentcolor;
+  flex-shrink: 0;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  transform: scale(1);
+}
+
+.radiogroup-box .point {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentcolor;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  left: 0px;
+  position: absolute;
+  transform: scale(0);
+  transition: transform 150ms cubic-bezier(0.4, 0, 1, 1) 0ms;
+}
+
+.radiogroup-box .point-active {
+  transform: scale(1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.radiogroup-box .label {
+  margin: 0;
+  padding-left: 6px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
