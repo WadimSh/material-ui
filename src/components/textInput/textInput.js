@@ -12,13 +12,13 @@ const TextInput = ({
   required,       // Флаг, указывающий, является ли поле обязательным для заполнения
   ...rest         // Дополнительные пропсы
 }) => {
-  const [inputValue, setInputValue] = React.useState(value);
-  const [error, setError] = React.useState('');
-  const [active, setActive] = React.useState(false);
-  const [focy, setFocy] = React.useState(false);
-  const inputRef = React.useRef(null);
+  const [inputValue, setInputValue] = useState(value);
+  const [error, setError] = useState('');
+  const [active, setActive] = useState(false);
+  const [focy, setFocy] = useState(false);
+  const inputRef = useRef(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleDocumentClick = (event) => {
       if (!event.target.contains(inputRef.current)) {
         setFocy(false);
