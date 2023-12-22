@@ -3,6 +3,7 @@
   font-size: 16px;
   text-align: center;
   text-decoration: none;
+  color: #fff;
   padding: 8px 16px;
   cursor: pointer;
   border-radius: 5px;
@@ -15,7 +16,6 @@
 .button:focus {
   /* Стили для hover и focus для общей части кнопки */
   background-color: #3498db;
-  color: #fff;
   outline: none;
 }
 

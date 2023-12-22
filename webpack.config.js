@@ -2,6 +2,7 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
@@ -42,6 +43,9 @@ module.exports = {
           to: 'common.css',
         },
       ],
+    }),
+    new webpack.ProvidePlugin({
+      React: 'react',
     }),
   ],
   optimization: {
