@@ -7,8 +7,6 @@ const CheckBox = ({
   onChange,    // HTML-событие onchange
   extraClass,  // HTML-атрибут class
   required,    // Флаг, указывающий, является ли checkbox обязательным для заполнения
-  disabled,    // Отключенное состояние checkbox
-  size,        // Размер checkbox: "small", "medium", "large"
   ...rest      // Дополнительные пропсы
 }) => {
   const [isChecked, setIsChecked] = useState(checked || false);
@@ -22,17 +20,7 @@ const CheckBox = ({
     }
   };
 
-  let checkboxBlockClass = `checkbox-block ${extraClass || ''}`.trim();
-  
-  // Применение стилей disabled, size пока в разработке
-  if (disabled) {
-    checkboxBlockClass += ' disabled';
-  }
-
-  if (size) {
-    checkboxBlockClass += ` ${size}`;
-  }
-
+  const checkboxBlockClass = `checkbox-block ${extraClass || ''}`.trim();
   const wrapperClass = `wrapper ${isChecked ? 'wrapper-active' : ''}`.trim();
 
   return (

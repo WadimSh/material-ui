@@ -7,8 +7,6 @@ const RadioGroup = ({
   selectedValue,  // Значение, которое будет выбрано по умолчанию при первоначальной загрузке компонента
   name,           // Имя для группировки радио-кнопок
   extraClass,     // HTML-атрибут class
-  disabled,       // Отключенное состояние радио-кнопок
-  size,           // Размер радио-кнопок: "small", "medium", "large"
   ...rest         // Дополнительные пропсы
 }) => {
   const [selectedOption, setSelectedOption] = useState(selectedValue || "");
@@ -21,17 +19,8 @@ const RadioGroup = ({
     }
   };
 
-  let radiogroupBlockClass = `radiogroup-block ${extraClass || ''}`.trim();
-  
-  // Применение стилей disabled, size пока в разработке
-  if (disabled) {
-    radiogroupBlockClass += ' disabled';
-  }
-
-  if (size) {
-    radiogroupBlockClass += ` ${size}`;
-  }
-  
+  const radiogroupBlockClass = `radiogroup-block ${extraClass || ''}`.trim();
+    
   return (
     <div className={radiogroupBlockClass} {...rest}>
       {options.map((option, index) => (

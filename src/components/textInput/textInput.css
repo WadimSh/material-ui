@@ -36,7 +36,7 @@
 
 .textinput-box .label-active {
   left: 0;
-  color: rgb(25, 118, 210);
+  color: #1976d2;
   padding: 0px 5px;
   transform: translate(14px, -9px) scale(0.75);
   max-width: calc(133% - 32px);
@@ -65,12 +65,12 @@
 }
 
 .textinput-box .wrapper-active {
-  border-color: rgb(25, 118, 210);
+  border-color: #1976d2;
   border-width: 2px;
 }
 
 .textinput-box .wrapper-error {
-  border-color: red;
+  border-color: #ff0000;
   border-width: 2px;
 }
 
@@ -93,7 +93,7 @@
 }
 
 .textinput-box .error {
-  color: red;
+  color: #ff0000;
   font-size: 0.75rem;
   line-height: 1.4375em;
   letter-spacing: 0.00938em;

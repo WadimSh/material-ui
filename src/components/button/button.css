@@ -1,11 +1,12 @@
 .button {
   display: inline-block;
-  padding: 10px 20px;
   font-size: 16px;
   text-align: center;
   text-decoration: none;
+  padding: 8px 16px;
   cursor: pointer;
   border-radius: 5px;
+  border: none;
   background-color: #1976d2;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -24,31 +25,24 @@
   cursor: not-allowed;
 }
 
-.button.small {
-  /* Стили для маленькой кнопки */
-  font-size: 12px;
+.button.button-left {
+  padding: 8px 16px 8px 8px;
 }
 
-.button.medium {
-  /* Стили для средней кнопки (стандартный размер) */
-  font-size: 16px;
-}
-
-.button.large {
-  /* Стили для большой кнопки */
-  font-size: 20px;
+.button.button-right {
+  padding: 8px 8px 8px 16px;
 }
 
 .button .before {
   /* Стили для иконки внутри кнопки */
   display: inline-block;
   vertical-align: middle; 
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
 .button .after {
   /* Стили для иконки внутри кнопки */
   display: inline-block;
   vertical-align: middle;
-  margin-left: 5px;
+  margin-left: 8px;
 }
